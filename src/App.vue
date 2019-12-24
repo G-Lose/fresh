@@ -1,0 +1,187 @@
+<template>
+  <div id="app">
+    <Navigation></Navigation>
+    <!-- <List /> -->
+  </div>
+</template>
+
+<script>
+import "./js/base";
+import Navigation from './components/Navigation.vue'
+// import List from "./components/detail";
+// (function(doc, win) {
+//   var docEl = doc.documentElement,
+//     resizeEvt = "orientationchange" in window ? "orientationchange" : "resize",
+//     recalc = function() {
+//       var clientWidth = docEl.clientWidth;
+//       if (!clientWidth) return;
+//       if (clientWidth >= 640) {
+//         // 这里的640 取决于设计稿的宽度
+//         docEl.style.fontSize = "100px";
+//       } else {
+//         docEl.style.fontSize = 100 * (clientWidth / 750) + "px";
+//       }
+//     };
+
+//   if (!doc.addEventListener) return;
+//   win.addEventListener(resizeEvt, recalc, false);
+//   doc.addEventListener("DOMContentLoaded", recalc, false);
+// })(document, window);
+export default {
+  name: "app",
+  components: {
+    // List
+    Navigation,
+  }
+};
+</script>
+
+<style>
+/*(1)清除默认样式*/
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+input {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 0.28rem;
+  line-height: 150%;
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html {
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  text-size-adjust: 100%;
+}
+
+fieldset,
+img,
+input,
+button {
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+
+/*去掉input等聚焦时的蓝色边框*/
+input {
+  outline: none;
+}
+
+/* 去掉列表的列表的项目符号 */
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+/* 行内元素的垂直居中 */
+/* 
+vertical-align：top 
+
+*/
+select,
+input {
+  vertical-align: middle;
+}
+
+/*select, input, textarea { font-size:12px; margin:0; }*/
+/*防止拖动*/
+textarea {
+  resize: none;
+}
+
+/*  去掉图片低测默认的3-4像素空白缝隙，或者用display：block也可以*/
+/* table { border-collapse:collapse; } */
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*清除浮动（不管）*/
+.clearfix:before,
+.clearfix:after {
+  /*清楚浮动*/
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+/* 设置h标签的大小，设置跟父亲一样大的字体font-size:100%; */
+
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.ac {
+  text-align: center;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.f16 {
+  font-size: 16px;
+}
+</style>

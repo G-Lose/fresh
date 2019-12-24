@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+    <title>reg</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="margin-bottom: 50px">注册</h1>
+        <div class="form-group has-feedback">
+            <label class="control-label" for="username">username</label>
+            <input type="text" class="form-control" id="username" aria-describedby="inputSuccess2Status">
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <div class="form-group has-feedback" style="margin-top: 30px">
+            <label class="control-label" for="password">password</label>
+            <input type="password" class="form-control" id="password" aria-describedby="inputSuccess2Status">
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <div class="form-group has-feedback" style="margin-top:30px">
+            <label class="control-label" for="password1">password-confirm</label>
+            <input type="password" class="form-control" id="password1" aria-describedby="inputSuccess2Status">
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-default btn-success" id="regbtn">注册</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+<script>
+    //校验用户名功能
+    //设置一个表示flag,用来判断用户名是否可用，只有当用户名可用并且两次输入的密码相等的时候注册成功
+    let flag = false
+    $('#username').on('blur', () => {
+        $.ajax({
+            type: "post",
+            url: "http://localhost:1910/user",
+            data: {
+                username: $('#username').val()
+            },
+            dataType: "json",
+            success: function (res) {
+                if (res.data.length) {
+                    //用户名已被注册
+                    $('#username').next().addClass("glyphicon-remove").removeClass('glyphicon-ok');
+                    $('#username').parent().addClass('has-error').removeClass('has-success')
+                } else {
+                    //用户名可用
+                    $('#username').next().addClass("glyphicon-ok").removeClass('glyphicon-remove');
+                    $('#username').parent().addClass('has-success').removeClass('has-error');
+                    flag = true;
+                }
+            }
+        });
+    })
+
+    //注册功能
+    $('#regbtn').on('click', () => {
+        let p0 = $('#password').val();
+        let p1 = $('#password1').val();
+        if (p0 === p1 && flag) {
+            $('#password1').next().addClass("glyphicon-ok").removeClass('glyphicon-remove');
+            $('#password1').parent().addClass('has-success').removeClass('has-error');
+            $('#password').next().addClass("glyphicon-ok").removeClass('glyphicon-remove');
+            $('#password').parent().addClass('has-success').removeClass('has-error');
+            $.ajax({
+                type: "post",
+                url: "http://localhost:1910/reg",
+                data: {
+                    username: $('#username').val(),
+                    password: p0
+                },
+                dataType: "json",
+                success: function (res) {
+                    location.href='login.html'
+                }
+            });
+        }
+        else{
+            alert('请输入正确的用户名或密码');
+            return
+        }
+    })
+</script>
+
+</html>

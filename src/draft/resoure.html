@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./jquery-3.4.1.js"></script>
+    <title>资源</title>
+    <style>
+    .title{
+        widows: 30px;
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+        let resoure = {
+            carousel: {
+                title: '推荐',
+                arr: ['http://qiniu.freshfresh.com/ff_app_3_0_20191212001826_605098.png?imageView2/2/w/800/q/100', 'http://qiniu.freshfresh.com/ff_app_3_0_20191211232325_339f89.gif?imageView2/2/w/800/q/100', 'http://qiniu.freshfresh.com/ff_app_3_0_20191214222224_e6e79c.png?imageView2/2/w/800/q/100', 'http://qiniu.freshfresh.com/ff_app_3_0_20191213203900_da2228.png?imageView2/2/w/800/q/100', 'http://qiniu.freshfresh.com/ff_app_3_0_20191212001826_605098.png?imageView2/2/w/800/q/100', 'http://qiniu.freshfresh.com/ff_app_3_0_20191211232325_339f89.gif?imageView2/2/w/800/q/100']
+            },
+            list: {
+                title1: '买手推荐',
+                title2: '大家都喜欢',
+                commend_list: [
+                    {
+                        "data_id": "18789",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20191126144924_3a188b.jpg?imageView2/2/w/200/q/100",
+                        "icon": "",
+                        "des_title": "不套袋不打蜡，评价说“糖心肉眼可见”！",
+                        "des_info": "B级-新疆阿克苏冰糖心苹果 4个装",
+                        "des_old_m": "",
+                        "des_now_m": "￥19.90",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "15054",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190128164009_a0493f.jpg?imageView2/2/w/200/q/100",
+                        "icon": "",
+                        "des_title": "空运直达！抢先尝鲜糖度更高的！惊艳到收货小姐姐！",
+                        "des_info": "A级-智利空运JJ级车厘子（28mm-30mm） 250g",
+                        "des_old_m": "￥41.90",
+                        "des_now_m": "￥29.90",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "18487",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20191101001928_16d75d.jpg?imageView2/2/w/200/q/100",
+                        "icon": "",
+                        "des_title": "入门级价格吃和牛！肉质紧实偏瘦，有较粗纤维，口感劲道，适合7分熟。",
+                        "des_info": "澳洲黑毛雪花和牛M9+沙朗牛排 120g",
+                        "des_old_m": "",
+                        "des_now_m": "￥43.80",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "14763",
+                        "src": "http://qiniu.freshfresh.com/ff_app_3_0_20191105172840_9d58b6.gif?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_1513676163817.png?imageView2/2/w/100/q/100",
+                        "des_title": "套袋果上市！在树上多呆了20天，更甜更水润！",
+                        "des_info": "A级-爱媛橘橙 2斤装",
+                        "des_old_m": "",
+                        "des_now_m": "￥19.90",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "5657",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190417162411_d0134d.jpg?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_1513676147481.png?imageView2/2/w/100/q/100",
+                        "des_title": "上海人都喜欢吃的红颜草莓！水嫩清甜，当季美味！",
+                        "des_info": "A级-红颜草莓 300g/盒",
+                        "des_old_m": "￥29.90",
+                        "des_now_m": "￥24.90",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "14981",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20181213101251_32cc1a.jpg?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_20181116163454_6ce58e.png?imageView2/2/w/100/q/100",
+                        "des_title": "必买的回购品，肉多腿肥，每只一盒贴心装~",
+                        "des_info": "鲜活牛蛙1只 250-350g（代宰杀）",
+                        "des_old_m": "￥9.90",
+                        "des_now_m": "￥6.60",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "7823",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_1528194661031.jpg?imageView2/2/w/200/q/100",
+                        "icon": "",
+                        "des_title": "只有生牛乳、糖、乳酸菌的酸奶！",
+                        "des_info": "简爱原味裸酸奶 1.08kg",
+                        "des_old_m": "￥33.80",
+                        "des_now_m": "￥19.90",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "5704",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190308135952_546d3c.jpg?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_1513676152950.png?imageView2/2/w/100/q/100",
+                        "des_title": "本地崇明大米！不多放水也能煮得鲜香软糯 2019年新米",
+                        "des_info": "明日厨房崇明大米 5kg",
+                        "des_old_m": "",
+                        "des_now_m": "￥36.80",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "18423",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20191024183219_242f60.jpg?imageView2/2/w/200/q/100",
+                        "icon": "",
+                        "des_title": "“惊”艳了岁月，细嫩鲜美，香气浓郁",
+                        "des_info": "B级-蒲江金艳黄心猕猴桃 6个装",
+                        "des_old_m": "",
+                        "des_now_m": "￥19.80",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "14370",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190312162754_99d543.jpg?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_1513676163817.png?imageView2/2/w/100/q/100",
+                        "des_title": "鸡种听着音乐吹着空调，产出新鲜营养的可生食蛋！",
+                        "des_info": "朝一Neo可生食鲜鸡蛋 10枚",
+                        "des_old_m": "￥25.00",
+                        "des_now_m": "￥19.80",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "13621",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20180802160518_b1a138.jpg?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_1513676163817.png?imageView2/2/w/100/q/100",
+                        "des_title": "涮锅必备，入口有浓郁肉香，停不下来的嗨爽！",
+                        "des_info": "澳洲黑毛和牛火锅片M4-5级 200g",
+                        "des_old_m": "",
+                        "des_now_m": "￥58.80",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "10200",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20181031134427_f342a9.jpg?imageView2/2/w/200/q/100",
+                        "icon": "",
+                        "des_title": "吃过的都会惊呼“太好吃了”！肉嫩爆汁！",
+                        "des_info": "A级-浙江涌泉蜜桔 2斤装",
+                        "des_old_m": "￥14.90",
+                        "des_now_m": "￥12.90",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "15301",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20181221171907_f86177.jpg?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_1513676152950.png?imageView2/2/w/100/q/100",
+                        "des_title": "除了生牛乳、乳酸菌和糖，还有一口香浓丝滑！",
+                        "des_info": "简爱酸奶滑滑100g*3",
+                        "des_old_m": "￥15.80",
+                        "des_now_m": "￥8.90",
+                        "add_cart": "加入购物车"
+                    }
+                ],
+                pro_mod_list: [
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "佛跳墙限时买一赠一",
+                                "p": "鲜掉眉毛 一罐不过瘾"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2256",
+                                "img": "http://qiniu.freshfresh.com/ff_app_3_0_20180925180311_c694a1.gif?imageView2/2/w/800/q/100"
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "弹弹弹的三文鱼扒",
+                                "p": "细腻三文鱼扒 79元3件"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2275",
+                                "img": "http://qiniu.freshfresh.com/ff_app_3_0_20191104192840_229955.gif?imageView2/2/w/800/q/100"
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "新品尝鲜",
+                                "p": "买这些到两鲜：空运进口鲜奶、蔬菜、进口奶粉、海淘"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2266",
+                                "img": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190920202219_084b08.jpg?imageView2/2/w/800/q/100"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "18770",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20191122120430_80fdf5.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "蟹齐阁严选大闸蟹2对装（母3.0±0.2两*2只，公4.0±0.2两*2只）",
+                                "mod_price": "￥158.00"
+                            },
+                            {
+                                "data_id": "1986",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20181204160648_365ca6.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "永安冬笋 650g",
+                                "mod_price": "￥26.90"
+                            },
+                            {
+                                "data_id": "18747",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20191202172800_aa57e8.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "滕州小土豆 2斤装",
+                                "mod_price": "￥2.99"
+                            },
+                            {
+                                "data_id": "18662",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20191119214026_9a8ed2.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "澳洲草饲菲力牛排 150g",
+                                "mod_price": "￥44.90"
+                            },
+                            {
+                                "data_id": "18661",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20191119212910_3375e0.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "澳洲谷饲筋头巴脑 500g",
+                                "mod_price": "￥39.90"
+                            },
+                            {
+                                "data_id": "11130",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190214092421_aa224d.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "红菜苔 300g",
+                                "mod_price": "￥6.90"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "入店必买",
+                                "p": "随便选一款就上千的好评，而且都是粉丝自己写的评论，很多都带图！"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "38",
+                                "img": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20181229115959_a1de8e.jpg?imageView2/2/w/800/q/100"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "14148",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20180917093810_83a867.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "法国银鳕鱼（1-2片随机发） 200g",
+                                "mod_price": "￥168.00"
+                            },
+                            {
+                                "data_id": "5149",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190220112123_0eb6c7.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "澳大利亚A2全脂鲜牛奶 1L*2",
+                                "mod_price": "￥116.00"
+                            },
+                            {
+                                "data_id": "14274",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190212111227_d1f0b3.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "冰淇淋红薯 600g",
+                                "mod_price": "￥15.80"
+                            },
+                            {
+                                "data_id": "18181",
+                                "src": "http://qiniu.freshfresh.com/ff_app_3_0_20191015175239_2035ef.gif?imageView2/2/w/200/q/100",
+                                "mod_title": "内蒙古特色羊蝎子原味 1.2kg",
+                                "mod_price": "￥75.00"
+                            },
+                            {
+                                "data_id": "6110",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190509165447_d024bd.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "澳洲谷饲牡蛎牛排 150g",
+                                "mod_price": "￥53.90"
+                            },
+                            {
+                                "data_id": "7823",
+                                "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_1528194661031.jpg?imageView2/2/w/200/q/100",
+                                "mod_title": "简爱原味裸酸奶 1.08kg",
+                                "mod_price": "￥19.90"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "时令水果推荐",
+                                "p": "两鲜同种水果里挑大的好的甜的，都差不多的话就挑性价比高的！"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2267",
+                                "img": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190911100311_ecca28.jpg?imageView2/2/w/800/q/100"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "4302",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "A级-泰国香水椰青 整箱/9个装（赠开椰器）",
+                                "mod_price": "￥69.90"
+                            },
+                            {
+                                "data_id": "10146",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "B级-荷兰青啤梨 4个装",
+                                "mod_price": "￥19.90"
+                            },
+                            {
+                                "data_id": "18123",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "新疆库尔勒七彩香梨 6个装",
+                                "mod_price": "￥15.90"
+                            },
+                            {
+                                "data_id": "18040",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "B级-新疆库尔勒香梨 4个装",
+                                "mod_price": "￥7.60"
+                            },
+                            {
+                                "data_id": "18136",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "百年老树砀山酥梨 4个装",
+                                "mod_price": "￥9.90"
+                            },
+                            {
+                                "data_id": "10424",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "B级-云南无花果 1盒装",
+                                "mod_price": "￥18.80"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "乳品推荐",
+                                "p": "买进口鲜奶到两鲜，空运包机，全程冷链配送！"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2035",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "7431",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "纤动益生谷物组合风味发酵乳 138g",
+                                "mod_price": "￥15.50"
+                            },
+                            {
+                                "data_id": "5149",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "澳大利亚A2全脂鲜牛奶 1L*2",
+                                "mod_price": "￥116.00"
+                            },
+                            {
+                                "data_id": "3128",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "九州屋顶原味发酵乳 950g",
+                                "mod_price": "￥24.80"
+                            },
+                            {
+                                "data_id": "17072",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "伊利 每益添活性乳酸菌饮品-原味 100ml*5",
+                                "mod_price": "￥12.80"
+                            },
+                            {
+                                "data_id": "18176",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "农夫山泉 巴旦木植物蛋白酸奶 135g*3",
+                                "mod_price": "￥12.80"
+                            },
+                            {
+                                "data_id": "12288",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "延世儿童牛奶 223ml*3",
+                                "mod_price": "￥36.80"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "肉食者的天堂",
+                                "p": "两鲜肉类买手一直单身，您知道为什么吗？"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2306",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "7584",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "澳洲厚切草饲眼肉牛排 250g",
+                                "mod_price": "￥32.90"
+                            },
+                            {
+                                "data_id": "66",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "兰皇鸡蛋 10枚",
+                                "mod_price": "￥29.80"
+                            },
+                            {
+                                "data_id": "15704",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "诚食的猪 冰鲜带皮五花肉 340g",
+                                "mod_price": "￥21.90"
+                            },
+                            {
+                                "data_id": "12265",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "巴西精选牛腩块 500g",
+                                "mod_price": "￥37.90"
+                            },
+                            {
+                                "data_id": "4323",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "皖南老农家散养童子鸡 850g",
+                                "mod_price": "￥36.80"
+                            },
+                            {
+                                "data_id": "15938",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "恒都 精选牛肉丝 150g",
+                                "mod_price": "￥14.80"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "海鲜水产推荐",
+                                "p": "很多海鲜，比如生蚝、海胆，餐馆里吃家里也吃才算是真正的品质生活"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2034",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "14968",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "鲜活鲍鱼仔 5只装 25-30g/只",
+                                "mod_price": "￥25.80"
+                            },
+                            {
+                                "data_id": "11043",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "挪威北极鳕鱼去刺颈肉儿童装 180g",
+                                "mod_price": "￥29.80"
+                            },
+                            {
+                                "data_id": "11554",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "三文鱼扒（1-2片随机发） 228g",
+                                "mod_price": "￥29.80"
+                            },
+                            {
+                                "data_id": "6838",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "阿根廷红虾仁 (7-12粒) 200g",
+                                "mod_price": "￥49.90"
+                            },
+                            {
+                                "data_id": "14148",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "法国银鳕鱼（1-2片随机发） 200g",
+                                "mod_price": "￥168.00"
+                            },
+                            {
+                                "data_id": "16173",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "澳大利亚银鳕鱼粒 150g",
+                                "mod_price": "￥59.00"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "速食推荐",
+                                "p": "早午晚饭从此更加方便和健康！"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2309",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "18650",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "日式蒲烧烤鳗鱼 120g",
+                                "mod_price": "￥39.90"
+                            },
+                            {
+                                "data_id": "18431",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "夏朵 藜麦桂花全麦吐司 190g",
+                                "mod_price": "￥20.00"
+                            },
+                            {
+                                "data_id": "15990",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "爆肉松蛋黄粢饭团 180g",
+                                "mod_price": "￥12.00"
+                            },
+                            {
+                                "data_id": "18180",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "内蒙古特色羊蝎子香辣口味 1.2kg",
+                                "mod_price": "￥118.00"
+                            },
+                            {
+                                "data_id": "5309",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "百事盛 致嫩盐焗鸡（供港） 900g",
+                                "mod_price": "￥66.80"
+                            },
+                            {
+                                "data_id": "10638",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "黑毛猪肉包（纯手工制作）360g",
+                                "mod_price": "￥36.00"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "生态蔬菜推荐",
+                                "p": "两鲜让鲜粉线上买菜和线下差不多价，有机菜性价比甚至更高！"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2334",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "14274",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "冰淇淋红薯 600g",
+                                "mod_price": "￥15.80"
+                            },
+                            {
+                                "data_id": "18240",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "清美 绍兴臭豆腐 285g",
+                                "mod_price": "￥7.50"
+                            },
+                            {
+                                "data_id": "17854",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "铅山红芽芋艿 400g",
+                                "mod_price": "￥4.90"
+                            },
+                            {
+                                "data_id": "17049",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "洪泽湖鲜冻鸡头米（芡实) 150g",
+                                "mod_price": "￥45.00"
+                            },
+                            {
+                                "data_id": "16835",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "诚食磨坊 滑豆腐 330g",
+                                "mod_price": "￥2.99"
+                            },
+                            {
+                                "data_id": "18078",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "矮脚小青菜 350g",
+                                "mod_price": "￥3.50"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "冰淇淋乐园",
+                                "p": "一口回到15度！"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2300",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "17521",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "可爱多甜筒 蜜桃乌龙口味雪糕 456g",
+                                "mod_price": "￥16.60"
+                            },
+                            {
+                                "data_id": "17038",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "啦松卡 红绿灯冰棒 95g*2",
+                                "mod_price": "￥3.99"
+                            },
+                            {
+                                "data_id": "16991",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "大东北咸蛋黄糯米方糕 80g",
+                                "mod_price": "￥0.99"
+                            },
+                            {
+                                "data_id": "16565",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "GELATO ALLA CREMA DI GROM 经典蛋奶冰淇淋 87g",
+                                "mod_price": "￥42.80"
+                            },
+                            {
+                                "data_id": "4906",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "裕和榴莲慕斯大福 180g",
+                                "mod_price": "￥32.00"
+                            },
+                            {
+                                "data_id": "13244",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "和路雪 可爱多甜筒 芒果酸奶口味冰淇淋 62g*6",
+                                "mod_price": "￥36.00"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "零食酒水推荐",
+                                "p": "网红零食果汁配进口饮料"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2343",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "18020",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "莱圣堡干红葡萄酒（西拉）750ml",
+                                "mod_price": "￥198.00"
+                            },
+                            {
+                                "data_id": "17396",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "农夫山泉 100%NFC芒果汁 300ml/瓶",
+                                "mod_price": "￥9.90"
+                            },
+                            {
+                                "data_id": "7236",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "AKOKO原味、抹茶、咖啡三拼曲奇 560g",
+                                "mod_price": "￥175.00"
+                            },
+                            {
+                                "data_id": "17747",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "希腊扎露斯 饮用天然水 500ml*6",
+                                "mod_price": "￥29.90"
+                            },
+                            {
+                                "data_id": "11981",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "成有王记冰杨梅（果蔬汁饮料） 380ml",
+                                "mod_price": "￥29.90"
+                            },
+                            {
+                                "data_id": "17397",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "农夫山泉 100%NFC苹果汁 300ml/瓶",
+                                "mod_price": "￥9.90"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "粮油推荐",
+                                "p": "2019年当季新米上市！两鲜自留田种植，新米从农场直送到家！"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2068",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "17971",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "饭扫光 麻辣什锦 280g",
+                                "mod_price": "￥12.80"
+                            },
+                            {
+                                "data_id": "18392",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "大方亮 东北长粒香大米 5kg",
+                                "mod_price": "￥39.90"
+                            },
+                            {
+                                "data_id": "14167",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "日清 清爽健美芥花籽油 5L",
+                                "mod_price": "￥78.00"
+                            },
+                            {
+                                "data_id": "5919",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "两鲜开心果 200g",
+                                "mod_price": "￥36.80"
+                            },
+                            {
+                                "data_id": "17323",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "千岁好山茶油40ml",
+                                "mod_price": "￥16.90"
+                            },
+                            {
+                                "data_id": "6466",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "两鲜藜麦 200g",
+                                "mod_price": "￥26.90"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "每周都要买 天天好心情",
+                                "p": "日常鲜花低至12元起"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2321",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "13353",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "云南金粉世家淡粉百合日常鲜花 2枝",
+                                "mod_price": "￥25.90"
+                            },
+                            {
+                                "data_id": "15886",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "山地玫瑰多肉小盆栽含陶瓷花盆 一盆",
+                                "mod_price": "￥23.00"
+                            },
+                            {
+                                "data_id": "15901",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "荷兰马蹄莲种植套装 一套",
+                                "mod_price": "￥68.00"
+                            },
+                            {
+                                "data_id": "15885",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "雪球多肉小盆栽含陶瓷花盆 一盆",
+                                "mod_price": "￥32.00"
+                            },
+                            {
+                                "data_id": "11058",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "云南小雏菊加小叶尤加利日常鲜花",
+                                "mod_price": "￥18.80"
+                            },
+                            {
+                                "data_id": "15887",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "蓝苹果多肉桌面小盆栽含陶瓷花盆 一盆",
+                                "mod_price": "￥23.00"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "家居/个护",
+                                "p": "家务护肤两不误"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2333",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "17219",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "の本叮叮不丁贴 12枚",
+                                "mod_price": "￥29.80"
+                            },
+                            {
+                                "data_id": "16345",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "黑人双重薄荷牙膏 225g",
+                                "mod_price": "￥16.90"
+                            },
+                            {
+                                "data_id": "16864",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "洁柔金尊130抽抽取式纸面巾(3包装)",
+                                "mod_price": "￥11.50"
+                            },
+                            {
+                                "data_id": "10044",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "Frosch 菲洛施 不锈钢/陶瓷清洁剂（柠檬） 500ml",
+                                "mod_price": "￥39.00"
+                            },
+                            {
+                                "data_id": "16975",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "六神经典花露水 195g",
+                                "mod_price": "￥15.90"
+                            },
+                            {
+                                "data_id": "16866",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "洁柔低白度自然木无芯70克4层10卷",
+                                "mod_price": "￥14.50"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    },
+                    {
+                        "pro_mod_title": [
+                            {
+                                "h3": "烘焙研究所",
+                                "p": "烘焙食材/工具一站式购齐，帮您今年轻松成为烘培达人！"
+                            }
+                        ],
+                        "action_btn": [
+                            {
+                                "id": "2095",
+                                "img": "https://m.freshfresh.com/images/lazy_load_default.jpg"
+                            }
+                        ],
+                        "pro_mod_list": [
+                            {
+                                "data_id": "5743",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "总统牌淡味黄油块 200g",
+                                "mod_price": "￥39.00"
+                            },
+                            {
+                                "data_id": "15654",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "法国进口 Kiri凯芮甜心小点奶酪 覆盆子挞味 78g",
+                                "mod_price": "￥32.80"
+                            },
+                            {
+                                "data_id": "15646",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "乐芝牛 原味小三角型涂抹奶酪 128g",
+                                "mod_price": "￥28.00"
+                            },
+                            {
+                                "data_id": "15655",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "法国进口 Kiri凯芮甜心小点奶酪 草莓芙蕾杰味 78g",
+                                "mod_price": "￥32.80"
+                            },
+                            {
+                                "data_id": "11709",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "金凯利高达奶酪片 150g",
+                                "mod_price": "￥33.00"
+                            },
+                            {
+                                "data_id": "11711",
+                                "src": "https://m.freshfresh.com/images/lazy_load_default.jpg",
+                                "mod_title": "金凯利红切达干酪片（淡味） 150g",
+                                "mod_price": "￥33.00"
+                            },
+                            {
+                                "data_id": null,
+                                "src": "https://m.freshfresh.com/images/findall.png",
+                                "mod_title": "查看全部",
+                                "mod_price": ""
+                            }
+                        ]
+                    }
+                ],
+                hotgoods: [
+                    {
+                        "data_id": "11219",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20180706161445.jpg?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_1513676163817.png?imageView2/2/w/100/q/100",
+                        "des_title": "五亭扬州狮子头（蟹黄） 240g",
+                        "des_old_m": "￥39.90",
+                        "des_now_m": "￥32.80",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "14148",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20180917093810_83a867.jpg?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_1513676147481.png?imageView2/2/w/100/q/100",
+                        "des_title": "法国银鳕鱼（1-2片随机发） 200g",
+                        "des_old_m": "",
+                        "des_now_m": "￥168.00",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "16835",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190530134703_36a31f.jpg?imageView2/2/w/200/q/100",
+                        "icon": "",
+                        "des_title": "诚食磨坊 滑豆腐 330g",
+                        "des_old_m": "",
+                        "des_now_m": "￥2.99",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "14527",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20181025165827_0763e9.jpg?imageView2/2/w/200/q/100",
+                        "icon": "",
+                        "des_title": "贵州水城羊肉粉（香辣） 270g",
+                        "des_old_m": "",
+                        "des_now_m": "￥22.00",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "13650",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190313104511_20372c.jpg?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_1513676163817.png?imageView2/2/w/100/q/100",
+                        "des_title": "晋龙 五福善养六无安全蛋 10枚",
+                        "des_old_m": "￥18.00",
+                        "des_now_m": "￥11.80",
+                        "add_cart": "加入购物车"
+                    },
+                    {
+                        "data_id": "17187",
+                        "src": "http://qiniu.freshfresh.com/odoo_croped_ff_app_3_0_20190715134109_a6d2e8.jpg?imageView2/2/w/200/q/100",
+                        "icon": "http://qiniu.freshfresh.com/ff_app_3_0_1513676163817.png?imageView2/2/w/100/q/100",
+                        "des_title": "六鳌红蜜薯 600g",
+                        "des_old_m": "",
+                        "des_now_m": "￥7.90",
+                        "add_cart": "加入购物车"
+                    }
+                ]
+            }
+        }
+        
+        // console.log(resoure)
+    </script>
+    <!-- <script>
+        var list = $(".commend_list")[0].children;
+        var commend_list = [];
+        for (var i = 0; i < 13; i++) {
+            var o = {}
+            o.data_id = list[i].querySelector('.commend_list a ').getAttribute('data-id');
+            o.src = list[i].querySelector('a img').src;
+            o.icon = list[i].querySelector('.icon img') ? list[i].querySelector('.icon img').src : '';
+            o.des_title = list[i].querySelector('.des_title').innerText;
+            o.des_info = list[i].querySelector('.des_info').innerText;
+            o.des_old_m = list[i].querySelector('.des_old_m') ? list[i].querySelector('.des_old_m').innerText : '';
+            o.des_now_m = list[i].querySelector('.des_now_m').innerText;
+            o.add_cart = list[i].querySelector('.add_cart').innerText;
+            commend_list.push(o)
+        }
+        JSON.stringify(commend_list)
+
+        var list = $(".commend_list")[1].children;
+        var commend_list = [];
+        for (var i = 0; i < 6; i++) {
+            var o = {}
+            o.data_id = list[i].querySelector('.bg_list a ').getAttribute('data-id');
+            o.src = list[i].querySelector('a img').src;
+            o.icon = list[i].querySelector('.icon img') ? list[i].querySelector('.icon img').src : '';
+            o.des_title = list[i].querySelector('.des_title').innerText;
+
+            o.des_old_m = list[i].querySelector('.des_old_m') ? list[i].querySelector('.des_old_m').innerText : '';
+            o.des_now_m = list[i].querySelector('.des_now_m').innerText;
+            o.add_cart = list[i].querySelector('.add_cart').innerText;
+            commend_list.push(o)
+        }
+        JSON.stringify(commend_list)
+
+        //
+        var list = document.querySelectorAll('.modproDiv');
+        var data = [];
+        for (var i = 0; i < list.length; i++) {
+            var o = {};
+
+            let mod_title = list[i].querySelector('.pro_mod_title').children;
+            let arr = [];
+            let title = {}
+            title.h3 = mod_title[0].innerText;
+            title.p = mod_title[1].innerText;
+            arr.push(title)
+            o.pro_mod_title = arr
+            //console.log(o)
+
+            let action_btn1 = list[i].querySelector('.action_btn');
+            let brr = [];
+            let action = {};
+            action.id = action_btn1.getAttribute('data-id');
+            action.img = action_btn1.querySelector('img').src;
+            brr.push(action);
+            o.action_btn = brr;
+
+            let pro_mod_list1 = list[i].querySelectorAll('.pro_mod_list .swipe-wrap');
+            //console.log(pro_mod_list1,'lll')
+            for (var j = 0; j < pro_mod_list1.length; j++) {
+                var crr = []
+                let pro_mod_list2 = pro_mod_list1[j].children
+
+
+                for (var y = 0; y < pro_mod_list2.length; y++) {
+                    var obj = {};
+                    obj.data_id = pro_mod_list2[y].querySelector('a').getAttribute('data-product');
+                    obj.src = pro_mod_list2[y].querySelector('img').src;
+                    obj.mod_title = pro_mod_list2[y].querySelector('.mod_title') ? pro_mod_list2[y].querySelector('.mod_title').innerText : '查看全部';
+                    obj.mod_price = pro_mod_list2[y].querySelector('.mod_price') ? pro_mod_list2[y].querySelector('.mod_price').innerText : '';
+                    crr.push(obj)
+
+
+                }
+                o.pro_mod_list = crr
+                console.log(o)
+                //console.log(crr,'1234')
+            }
+
+            data.push(o)
+
+
+        }
+        JSON.stringify(data)
+    </script> -->
+</body>
+
+</html>
